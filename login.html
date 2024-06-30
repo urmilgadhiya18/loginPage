@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn Page</title>
+</head>
+<body>
+    <div class="main">
+        <div class="form">
+            <input type="checkbox" id="cb">
+            <div class="upper">
+                <!-- <h2 class="c" for>Sign In</h2> -->
+                <form action="#" method="get" class="up">
+                    <label for="cb" class="c">Sign In</label>
+                    <input type="text" name="fname" placeholder="First Name">
+                    <input type="text" name="lname" placeholder="Last Name">
+                    <input type="email" name="email" placeholder="Email id">
+                    <input type="password" name="password" placeholder="Password">
+                    <button class="button">Sign In</button>
+                </form>
+            </div>
+            <div class="down">
+                <!-- <h2 class="c">Login</h2> -->
+                <form action="#" class="dn">
+                    <label for="cb" class="c">Login</label>
+                    <input type="email" name="email" placeholder="Email id">
+                    <input type="password" name="password" placeholder="Password">
+                    <button class="button">Login</button>
+                </form>
+            </div> 
+        </div>  
+    </div>
+    <div class="author">by: Urmil Gadhiya</div>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #808080;
+        }
+        #cb{
+            display: none;
+        }
+        .main .form{
+            background-color: #0a0a36;
+            border-radius: 20px;
+            width: 400px;
+            height: 500px;
+            padding-top: 40px;
+            overflow: hidden;
+        }
+        .main .form .upper{
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+        .main .form .upper .c{
+            color: #fff;
+            font-weight: 700;
+            font-size: 28px;
+            margin-bottom: 20px;
+            transform: scale(1.5);
+            cursor: pointer;
+            transition: 1s ease-in;
+        }
+        .main .form .up,.dn{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .main .form .upper h2{
+            color: #fff;
+            padding-bottom: 10px;
+        }
+        .main .form input{
+            width: 250px;
+            padding: 15px 30px;
+            border-radius: 10px;
+            border: 1px solid #000;
+            margin: 7px 0px;
+        }
+        .main .form .button{
+            border: none;
+            font-size: 16px;
+            font-weight: 700;
+            width: max-content;
+            margin: 10px 0px;
+            padding: 15px 40px;
+            border-radius: 10px;
+            align-self: center;
+            background-color: #7300ff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .main .form .down{
+            height: 500px;
+            border: none;
+            background-color: #fff;
+            border-radius: 60% / 10%;
+            transform: translateY(-100px);
+            transition: 1s ease-in-out;
+        }
+        .main .form .down .c{
+            color: #0a0a36;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 40px 0px 25px 0px;
+            transform: scale(1);
+            cursor: pointer;
+            transition: 1s ease-in-out;
+        }
+        #cb:checked ~ .down{
+            transform: translateY(-460px);
+        }
+        #cb:checked ~ .down .c{
+            transform: scale(1.5);
+        }
+        #cb:checked ~ .upper .c{
+            transform: scale(1);
+        }
+        .main .form .button:active{
+            background-color: #fff;
+            color: #0a0a36;
+            border: 1px solid #000;
+        }
+        .author{
+            margin: 18px;
+            padding: 18px;
+            font-size: 18px;
+            font-weight: 900;
+            position: absolute;
+            bottom: 0px;
+        }
+    </style>
+
+</body>
+</html>
